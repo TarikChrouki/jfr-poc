@@ -1,0 +1,23 @@
+jenkins:
+  globalNodeProperties:
+    - envVars:
+        env:
+          - key: SOME_CASC_ENV_VAR
+            value: a value configured via JCasC
+unclassified:
+  globalLibraries:
+    libraries:
+      - name: "first-lib"
+        retriever:
+          modernSCM:
+            scm:
+              git:
+                remote: "https://github.com/iamvickyav/jenkins-sharedlib.git"
+                #remote: "git@github.com:furry-octo-lamp-inc/pipeline-library.git"
+                  #credentialsId: 'SHA256:DndcYBF7t7sojKjHVNjwjHrf0N8SBBRUG2XfW00+NH8'
+                  ## credentialsId: 'some-credentials'
+tool:
+  git:
+    installations:
+      - name: git
+        home: /usr/bin/git
